@@ -763,25 +763,25 @@ int main() {
 
 		case 7: {
 			// STATISTICS
-			cout << "\n | [SYSTEM STATISTICS]" << endl;
-			cout << string(40, '-') << endl;
-			cout << "Total Devices:    " << devices.size() << endl;
-			cout << "Total Sensors:    " << sensors.size() << endl;
-			cout << "Active Observers: " << hub->getObserverCount() << endl;
-			cout << "Events Processed: " << eventQueue.getTotalProcessed() << endl;
-			cout << "Pending Events:   " << eventQueue.getPendingCount() << endl;
-			cout << string(40, '-') << endl << endl;
+			cout << "\n -----------------------------------------------------------------------"<<endl;
+			cout << " |                         [SYSTEM STATISTICS]                         |"<< endl;
+		    cout << " -----------------------------------------------------------------------"<<endl;
+			cout << " | Total Devices:    " << devices.size() << "                                                 |"<< endl;
+			cout << " | Total Sensors:    " << sensors.size() << "                                                 |"<< endl;
+			cout << " | Active Observers: " << hub->getObserverCount() << "                                                 |"<< endl;
+			cout << " | Events Processed: " << eventQueue.getTotalProcessed() << "                                                 |"<< endl;
+			cout << " | Pending Events:   " << eventQueue.getPendingCount() << "                                                 |"<< endl;
+		    cout << " -----------------------------------------------------------------------"<<endl;
 			break;
 		}
 
 		case 8: {
-			cout << "\n | [SYSTEM] Shutting down...\n" << endl;
-			Logger::getInstance()->log("System shutdown");
+			cout << "\n [SYSTEM] Shutting down...\n" << endl;
 			break;
 		}
 
 		default: {
-			cout << " | [ERROR] Invalid choice\n" << endl;
+			cout << " [ERROR] Invalid choice" << endl;
 		}
 		}
 	}
